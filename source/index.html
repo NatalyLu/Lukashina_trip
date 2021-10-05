@@ -19,35 +19,29 @@
   </head>
   <body id="body">
     <header>
-      <nav class="nav">
-        <a class="nav__logo logo" href="#contacts" data-anchor-link="anchor-link">
-          <picture>
-            <source srcset="img/logo.avif 1x, img/logo@2x.avif 2x" type="img/avif">
-            <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="img/webp">
-            <img class="logo__img" src="img/logo.png" srcset="img/logo@2x.png 2x" width="67" height="95" alt="Логотип Академии">
-          </picture>
-          <h1 class="logo__title">Академия</h1>
-          <h2 class="logo__sub-title">Центр подготовки к ЕГЭ/ОГЭ</h2>
-        </a>
-        <ul class="nav__list">
-          <li><a href="#aboutUs" data-anchor-link="anchor-link">О нас</a></li>
-          <li><a href="#price" data-anchor-link="anchor-link">Услуги</a></li>
-          <li><a href="#reviews" data-anchor-link="anchor-link">Отзывы</a></li>
-          <li><a href="#contacts" data-anchor-link="anchor-link">Контакты</a></li>
+      <a href="#" class="main-nav__logo">
+        <img src="img/logo-adaptive.svg" width="185" height="96" alt="Логотип Way">
+      </a>
+      <nav class="main-nav">
+        <input class="button-burger main-nav__burger-input" id="burger" type="checkbox" value="Открыть меню">
+        <label class="button-burger__lines main-nav__burger-lines" for="burger">
+          <span class="button-burger__line"></span>
+        </label>
+        <ul class="main-nav__list">
+          <li>
+            <a href="#" class="main-nav__item">О путешествии</a>
+          </li>
+          <li>
+            <a href="#" class="main-nav__item" >Цены</a>
+          </li>
         </ul>
-        <a role="link" aria-disabled="true" class="nav__menu-btn menu-btn">
-          <span></span>
-        </a>
-        <div class="nav__contacts">
-          <div class="nav__address">
-            Нижний Новгород,<br>пр. Молодежный, 2А
-          </div>
-          <div class="nav__phones">
-            <a href="tel:{+7(903)846-67-77}" aria-label="Академия телефон 1">+7(903)846-67-77</a>
-            <a href="tel:{+7(987)752-55-68}" aria-label="Академия телефон 2">+7(987)752-55-68</a>
-          </div>
-        </div>
       </nav>
+      <div class="main-nav__phone">
+        <svg width="32" height="24">
+          <use xlink:href="/img/svg/sprite.svg#phone"></use>
+        </svg>
+        <a href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи">+7 (499) -784-684-46</a>
+      </div>
     </header>
 
     <main>

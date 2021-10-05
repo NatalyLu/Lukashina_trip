@@ -1,0 +1,119 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.main-nav__list {
+  @include drop__list-style();
+  flex-direction: column;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    li {
+      width: 20%;
+    }
+  }
+}
+
+.main-nav__item {
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  font-size: 1.286rem;
+  line-height: 2.86rem;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px 5px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text-alt-color;
+  background-color: $background-color;
+  border-bottom: 1px solid rgba($border-color, 0.2);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $background-color-darken;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $background-color-darken;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 1rem;
+    line-height: 1.86rem;
+    color: $text-color;
+    padding: 15px 5px;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+      color: $background-color;
+    }
+
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $text-color;
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav__item--logo {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 140px;
+  }
+}
+
+.main-nav__logo {
+  text-align: center;
+  height: 55px;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 187px;
+    height: 97px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.main-nav__burger-input,
+.main-nav__burger-lines {
+  top: 17px;
+  right: 21px;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__burger-input:checked ~ .main-nav__list {
+  display: flex;
+}
