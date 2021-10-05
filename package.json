@@ -33,11 +33,11 @@
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-less": "^5.0.0",
     "gulp-order": "^1.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgstore": "^8.0.0",
     "gulp-terser-js": "^5.2.2",
@@ -46,6 +46,7 @@
     "optipng": "^3.0.0",
     "postcss": "^8.3.8",
     "postcss-csso": "^5.0.1",
+    "sass": "^1.42.1",
     "stylelint": "^13.13.1",
     "svgo": "^2.7.0"
   }
