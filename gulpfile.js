@@ -28,16 +28,19 @@ exports.html = html;
 // Styles
 const styles = () => {
   return gulp.src("source/sass/style.scss")
-  .pipe(plumber())
-  .pipe(sourcemap.init())
-  .pipe(sass())
-  .pipe(postcss([autoprefixer()]))
-  .pipe(gulp.dest("build/css"))
-  .pipe(postcss([csso()]))
-  .pipe(sourcemap.write("."))
-  .pipe(rename("style.min.css"))
-  .pipe(gulp.dest("build/css"))
-  .pipe(sync.stream());
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(rename("styleControl.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
 };
 exports.styles = styles;
 
