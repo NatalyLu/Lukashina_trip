@@ -1,5 +1,11 @@
-@mixin drop__list-style() {
-  padding: 0;
+html {
+  font-size: 14px;
+  font-family: "Montserrat-Regular", "Arial", sans-serif;
+}
+
+body {
   margin: 0;
-  list-style-type: none;
+  background: $main-background-color;
+  max-width: $max-width;
+  margin: 0 auto;
 }

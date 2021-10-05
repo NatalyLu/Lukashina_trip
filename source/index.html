@@ -19,10 +19,12 @@
   </head>
   <body id="body">
     <header>
-      <a href="#" class="main-nav__logo">
-        <img src="img/logo-adaptive.svg" width="185" height="96" alt="Логотип Way">
-      </a>
       <nav class="main-nav">
+        <a href="#" class="main-nav__logo" aria-label="Логотип Way">
+          <svg width="32" height="24">
+            <use xlink:href="/img/svg/sprite.svg#logo"></use>
+          </svg>
+        </a>
         <input class="button-burger main-nav__burger-input" id="burger" type="checkbox" value="Открыть меню">
         <label class="button-burger__lines main-nav__burger-lines" for="burger">
           <span class="button-burger__line"></span>
@@ -35,20 +37,16 @@
             <a href="#" class="main-nav__item" >Цены</a>
           </li>
         </ul>
+        <div class="main-nav__phone">
+          <svg width="32" height="24">
+            <use xlink:href="/img/svg/sprite.svg#phone"></use>
+          </svg>
+          <a href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи">+7 (499) -784-684-46</a>
+        </div>
       </nav>
-      <div class="main-nav__phone">
-        <svg width="32" height="24">
-          <use xlink:href="/img/svg/sprite.svg#phone"></use>
-        </svg>
-        <a href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи">+7 (499) -784-684-46</a>
-      </div>
     </header>
 
     <main>
-     
-
-      
-
       <section class="contacts" id="contacts">
         <div class="contacts__wrapper">
           <h1 class="sub-title contacts__title">Наш адрес</h1>

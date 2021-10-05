@@ -23,7 +23,7 @@
     height: 4px;
     top: 50%;
     margin-top: -2px;
-    background-color: $text-color;
+    background-color: $main-color;
   }
 
   &::before,
@@ -42,10 +42,10 @@
 }
 
 .button-burger:checked {
-  ~ .button-burger-lines > .button-burger-line,
-  ~ .button-burger-lines > .button-burger-line::before,
-  ~ .button-burger-lines > .button-burger-line::after {
-    background-color: $text-color;
+  ~ .button-burger__lines > .button-burger__line,
+  ~ .button-burger__lines > .button-burger__line::before,
+  ~ .button-burger__lines > .button-burger__line::after {
+    background-color: $main-color;
   }
 
   ~ .button-burger__lines > .button-burger__line {

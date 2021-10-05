@@ -1,7 +1,14 @@
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
-$text-color: black;
+$max-width: 1322px; // 1170 + 76*2 => 76- для падингов;
+
+$main-color: #141517;
+$sub-dark-color: #2C2E3F;
+$active-color: #FE7865;
+$sub-active-color: #F17D4B;
+$main-background-color: #fff;
+
 $text-alt-color: pink;
 $text-active-color: red;
 $text-active-hover-color: blue;
