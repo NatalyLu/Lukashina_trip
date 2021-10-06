@@ -1,5 +1,6 @@
-$tablet-width: 768px;
-$desktop-width: 1200px;
+$tablet-width: 1200px;
+$mobile-width: 768px;
+// $desktop-width: 1200px;
 
 $max-width: 1322px; // 1170 + 76*2 => 76- для падингов;
 
@@ -8,6 +9,8 @@ $sub-dark-color: #2C2E3F;
 $active-color: #FE7865;
 $sub-active-color: #F17D4B;
 $main-background-color: #fff;
+$light-background: #FBF8F8;
+// $light: #DADADA;
 
 $text-alt-color: pink;
 $text-active-color: red;
