@@ -18,6 +18,8 @@
 
 .main-title--underline {
   padding-bottom: 30px;
+  position: relative;
+  width: max-content;
 
   &:after {
     content: "";

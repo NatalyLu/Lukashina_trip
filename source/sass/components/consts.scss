@@ -6,6 +6,7 @@ $max-width: 1322px; // 1170 + 76*2 => 76- для падингов;
 
 $main-color: #141517;
 $sub-dark-color: #2C2E3F;
+$opacity-sub-dark: rgba($sub-dark-color, .7);
 $active-color: #FE7865;
 $sub-active-color: #F17D4B;
 $main-background-color: #fff;

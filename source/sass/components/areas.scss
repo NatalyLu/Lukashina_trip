@@ -35,7 +35,7 @@
 
 .areas__description {
   max-width: 360px;
-  color: rgba($sub-dark-color, .7);
+  color: $opacity-sub-dark;
   margin: 0 0 55px 0;
 
   @media (max-width: $tablet-width) {

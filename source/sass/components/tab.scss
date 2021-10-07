@@ -1,5 +1,28 @@
-.tab__review,
-.tab__img {
-  display: none;
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
 }
+
+.tab__info {
+  max-width: 370px;
+}
+
+.tab__img {
+  max-width: 430px;
+  max-height: 596px;
+}
+
+
+
+// review
+.tab__review {
+  position: absolute;
+  top: 114px;
+  right: -270px;
+  // margin-right: 112px;
+}
+
 
