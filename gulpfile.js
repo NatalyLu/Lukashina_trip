@@ -97,7 +97,7 @@ exports.createAvif = createAvif;
 
 // Sprite
 const sprite = () => {
-return gulp.src("source/img/svg/*.svg")
+return gulp.src("build/img/svg/sprite/*.svg")
 .pipe(svgstore({
   inlineSvg: true
 }))
