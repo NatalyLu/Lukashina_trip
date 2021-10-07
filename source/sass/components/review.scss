@@ -1,0 +1,42 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  min-width: 382px;
+  width: 382px;
+  padding: 33px 30px 30px 30px;
+  background-color: $main-background-color;
+  box-sizing: border-box;
+}
+
+.review__title {
+  font-family: "Montserrat-Medium", "Arial", sans-serif;
+  font-size: 1.875rem;
+  line-height: 2.3rem;
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+}
+
+.review__description {
+  color: $opacity-sub-dark;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  margin: 0 0 35px 0;
+}
+
+.review__author {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  align-items: center;
+  gap: 0 16px;
+
+}
+
+.review__img {
+  border-radius: 50%;
+}
+
+.review__name {
+  font-family: "Montserrat-Medium", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}

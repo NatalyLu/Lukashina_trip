@@ -9,8 +9,8 @@
   padding-top: 36px;
   padding-bottom: 32px;
   font-family: "Montserrat-Medium", "Arial", sans-serif;
-  font-size: 1rem;
-  line-height: 1.2rem;
+  font-size: .875rem;
+  line-height: 1.05rem;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
@@ -50,8 +50,8 @@
 
   @media (max-width: $tablet-width) {
     font-family: "Montserrat-SemiBold", "Arial", sans-serif;
-    font-size: 1.43rem;
-    line-height: 1.86rem;
+    font-size: 1.25rem;
+    line-height: 1.63rem;
     position: absolute;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(60px, max-content);
@@ -113,7 +113,7 @@
   flex-direction: row;
   align-items: center;
   font-family: "Montserrat-Regular", "Arial", sans-serif;
-  font-size: 1.286rem;
+  font-size: 1.125rem;
 
   @media (max-width: $tablet-width) {
     display: none;
