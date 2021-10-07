@@ -4,12 +4,20 @@
   font-size: 1.143rem;
   line-height: 2rem;
   color: $sub-dark-color;
+  margin-bottom: 124px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 95px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .areas__title {
   position: relative;
   max-width: 360px;
-  padding-bottom: 30px;
   margin-bottom: 30px;
 
   @media (max-width: $tablet-width) {
@@ -19,14 +27,6 @@
   }
 
   &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 65%;
-    height: 4px;
-    background-color: $active-color;
-
     @media (max-width: $tablet-width) {
       display: none;
     }

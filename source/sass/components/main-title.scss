@@ -15,3 +15,17 @@
     line-height: 3rem;
   }
 }
+
+.main-title--underline {
+  padding-bottom: 30px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 4px;
+    background-color: $active-color;
+  }
+}
