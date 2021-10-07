@@ -1,0 +1,44 @@
+.tabs {
+  display: block;
+  background-image: url('/img/svg/background.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 1208px;
+}
+
+.tabs__wrapper {
+  @include center;
+}
+
+.tabs__items {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba($sub-dark-color, .3);
+}
+
+.tabs__item {
+  font-family: "Montserrat-Regular", "Arial", sans-serif;
+  font-size: 1.143rem;
+  line-height: 1.7rem;
+  color: rgba($sub-dark-color, .3);
+  text-decoration: none;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+  // &:active {
+    color: $active-color;
+  }
+}
+
+.tabs__tab {
+  display: none;
+
+  &:target {
+    display: block;
+  }
+}
