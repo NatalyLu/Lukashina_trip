@@ -23,7 +23,7 @@
   &::after {
     content: "";
     position: absolute;
-    transition-duration: 0.7s;
+    transition-duration: .3s;
   }
 
   &::before {
@@ -42,7 +42,7 @@
   ~ .button-burger__lines > .button-burger__line,
   ~ .button-burger__lines > .button-burger__line::before,
   ~ .button-burger__lines > .button-burger__line::after {
-    background-color: $main-color;
+    background-color: rgba($main-color, .8);
   }
 
   ~ .button-burger__lines > .button-burger__line {

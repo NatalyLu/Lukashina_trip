@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+  font-size: .857rem;
+  line-height: 1rem;
+  padding: 30px 40px;
+  color: $text-light;
+  background-color: $active-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    padding: 19px;
+    max-width: 288px;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $sub-active-color;
+  }
+}
+
+.button--arrow {
+  justify-content: space-between;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,160 @@
+.areas {
+  @include center;
+  font-family: "Montserrat-Regular", "Arial", sans-serif;
+  font-size: 1.143rem;
+  line-height: 2rem;
+  color: $sub-dark-color;
+}
+
+.areas__title {
+  position: relative;
+  max-width: 360px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 0;
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 4px;
+    background-color: $active-color;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.areas__description {
+  max-width: 360px;
+  color: rgba($sub-dark-color, .7);
+  margin: 0 0 55px 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 0  auto 40px auto;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.areas__list {
+  @include drop__list-style;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -60px; // Убираем лишние отступы справа и снизу от li
+  margin-bottom: -100px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 -40px -40px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 -35px -35px 0;
+  }
+}
+
+.areas__item {
+  margin: 0 60px 100px 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 40px 40px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 35px 35px 0;
+  }
+
+  img {
+    max-width: 350px;
+
+    @media (max-width: $tablet-width) {
+      max-width: 288px;
+      max-height: 425px;
+    }
+  }
+}
+
+.areas__link {
+  position: relative;
+  color: inherit;
+  display: block;
+
+  &:before,
+  &:after {
+    position: absolute;
+    height: 0;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  &:before {
+    content: "";
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: rgba($main-color, .6);
+    transform-origin: center;
+  }
+
+  &:after {
+    content: "Смотреть подробнее";
+    width: 266px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 15px;
+    font-family: "Montserrat-Medium", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.21rem;
+    color: $text-light;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid $text-light;
+    box-sizing: border-box;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    opacity: 1;
+    top: 0;
+    height: 100%;
+    z-index: 3;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    opacity: 1;
+    height: auto;
+    z-index: 3;
+  }
+}
+
+.areas__name {
+  font-family: "Montserrat-Medium", "Arial", sans-serif;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  min-width: 215px;
+  width: max-content;
+  max-width: 95%;
+  padding: 16px;
+  background-color: $main-background-color;
+  text-align: center;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}

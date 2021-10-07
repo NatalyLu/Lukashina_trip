@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Путешествие по Европе. Туры в Грецию, Албанию, Черногорию и др. Также организовываем индивидуальное путешествие под вашу компанию">
     <meta name="keywords" content="Путешествия, туры, экскурсии, корпоративные путешествия, курорты">
-    <meta name="image" name="image" content="img/svg/logo.svg">
+    <meta name="image" name="image" content="/img/svg/logo.svg">
     <meta name="format-detection" content="telephone=yes">
     <title>Way</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
@@ -31,10 +31,10 @@
         </label>
         <ul class="main-nav__list">
           <li>
-            <a href="#" class="main-nav__item">О путешествии</a>
+            <a href="#" class="main-nav__link">О путешествии</a>
           </li>
           <li>
-            <a href="#" class="main-nav__item" >Цены</a>
+            <a href="#" class="main-nav__link" >Цены</a>
           </li>
         </ul>
         <div class="main-nav__phone">
@@ -45,26 +45,85 @@
         </div>
       </nav>
     </header>
-
     <main>
-      <section class="contacts" id="contacts">
-        <div class="contacts__wrapper">
-          <h1 class="sub-title contacts__title">Наш адрес</h1>
-          <p class="contacts__adress">Проспект Молодежный, 2А (ТЦ Звезда), 2 этаж</p>
-          <div class="contacts__map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A63f2c246e2dc5848fc6d1ffffb6c6c4dcba81ea931686a73924c17c7f620097e&amp;source=constructor" width="1100" height="500" frameborder="0"></iframe>
-          </div>
-          <div class="contacts__links">
-            <div class="contacts__numbers animation-apear animation-apear--element">
-              <span>Телефоны для связи:</span>
-              <a href="tel:{+7(903)846-67-77}" aria-label="Академия телефон 1">+7(903)846-67-77</a>
-              <a href="tel:{+7(987)752-55-68}" aria-label="Академия телефон 2">+7(987)752-55-68</a>
-            </div>
-            <div class="contacts__email animation-apear animation-apear--element">
-              <span>Email:</span>
-              <a href="mailto:{email}?subject={subject}&body={egeacademynn@gmail.com}">egeacademynn@gmail.com</a>
-          </div>
+      <section class="introduce">
+        <picture>
+          <source srcset="/img/main-img.avif 1x, /img/main-img@2x.avif 2x" type="image/avif">
+          <source srcset="/img/main-img.webp 1x, /img/main-img@2x.webp 2x" type="image/webp">
+          <img class="introduce__background" src="/img/main-img.jpg" srcset="/img/main-img@2x.jpg 2x" width="1920" height="860" alt="Дом на горе">
+        </picture>
+        <div class="introduce__wrapper">
+          <h1 class="introduce__title main-title">Путешествие по Европе</h1>
+          <p class="introduce__description">
+            В этом туре вы откроете для себя Европу в новом свете. 
+            Вас ждет: море, горы, а также потрясающая красота природы.
+          </p>
+          <a href="" class="introduce__button button button--arrow">
+            смотреть тур
+            <svg width="32" height="24">
+              <use xlink:href="/img/svg/sprite.svg#arrow"></use>
+            </svg>
+          </a>
         </div>
+      </section>
+
+      <section class="areas">
+        <h2 class="areas__title main-title">Места посещения</h2>
+        <p class="areas__description">
+          Вы можете выбрать полный тур или частичный, с посещением первых 3 мест
+        </p>
+        <ul class="areas__list">
+          <li class="areas__item">
+            <a href="area1" class="areas__link">
+              <picture>
+                <source srcset="/img/areas/area-1.avif 1x, /img/areas/area-1@2x.avif 2x" type="image/avif">
+                <source srcset="/img/areas/area-1.webp 1x, /img/areas/area-1@2x.webp 2x" type="image/webp">
+                <img src="/img/areas/area-1.jpg" srcset="/img/areas/area-1@2x.jpg 2x" width="350" height="430" alt="фото Греции">
+              </picture>
+              <span class="areas__name">Греция</span>
+            </a>
+          </li>
+          <li class="areas__item">
+            <a href="area2" class="areas__link">
+              <picture>
+                <source srcset="/img/areas/area-2.avif 1x, /img/areas/area-2@2x.avif 2x" type="image/avif">
+                <source srcset="/img/areas/area-2.webp 1x, /img/areas/area-2@2x.webp 2x" type="image/webp">
+                <img src="/img/areas/area-2.jpg" srcset="/img/areas/area-2@2x.jpg 2x" width="350" height="430" alt="фото Албании с высоты">
+              </picture>
+              <span class="areas__name">Албания</span>
+              </a>
+          </li>
+          <li class="areas__item">
+            <a href="area3" class="areas__link">
+              <picture>
+                <source srcset="/img/areas/area-3.avif 1x, /img/areas/area-3@2x.avif 2x" type="image/avif">
+                <source srcset="/img/areas/area-3.webp 1x, /img/areas/area-3@2x.webp 2x" type="image/webp">
+                <img src="/img/areas/area-3.jpg" srcset="/img/areas/area-3@2x.jpg 2x" width="350" height="430" alt="фото Македонии">
+              </picture>
+              <span class="areas__name">Македония</span>
+            </a>
+          </li>
+          <li class="areas__item">
+            <a href="area4" class="areas__link">
+              <picture>
+                <source srcset="/img/areas/area-4.avif 1x, /img/areas/area-4@2x.avif 2x" type="image/avif">
+                <source srcset="/img/areas/area-4.webp 1x, /img/areas/area-4@2x.webp 2x" type="image/webp">
+                <img src="/img/areas/area-4.jpg" srcset="/img/areas/area-4@2x.jpg 2x" width="350" height="430" alt="фото реки с высоты Черногории">
+              </picture>
+              <span class="areas__name">Черногория</span>
+            </a>
+          </li>
+          <li class="areas__item">
+            <a href="area5" class="areas__link">
+              <picture>
+                <source srcset="/img/areas/area-5.avif 1x, /img/areas/area-5@2x.avif 2x" type="image/avif">
+                <source srcset="/img/areas/area-5.webp 1x, /img/areas/area-5@2x.webp 2x" type="image/webp">
+                <img src="/img/areas/area-5.jpg" srcset="/img/areas/area-5@2x.jpg 2x" width="350" height="430" alt="фото пещеры в Хорватии">
+              </picture>
+              <span class="areas__name">Хорватия</span>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section class="popup" id="popup-call">
@@ -139,8 +198,6 @@
         </li>
       </ul>
     </footer>
-    <script type="text/javascript" src="js/jquery/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

@@ -11,6 +11,7 @@
   font-family: "Montserrat-Medium", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.2rem;
+  box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -40,7 +41,7 @@
 }
 
 .main-nav__list {
-  @include drop__list-style();
+  @include drop__list-style;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30px, max-content));
   gap: 30px 30px;
@@ -57,7 +58,8 @@
     padding-top: 134px;
     top: 0;
     right: 0;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     min-height: 0;
     opacity: 0;
     visibility: hidden;
@@ -67,14 +69,42 @@
   }
 }
 
-.main-nav__item {
+.main-nav__link {
   color: inherit;
   text-decoration: none;
+
   @media (max-width: $tablet-width) {
     display: block;
+    position: relative;
     width: 100%;
     background-color: $light-background;
     padding: 17px 19px;
+    box-sizing: border-box;
+  }
+
+  &:before {
+    @media (max-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: calc(50% - 3px);
+      right: 32px;
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid rgba($sub-dark-color, .5);
+      border-right: 1px solid rgba($sub-dark-color, .5);
+      transform: translateX(0) rotate(-45deg);
+      transition: all .3s ease;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $active-color;
+    &:before {
+      @media (max-width: $tablet-width) {
+        transform: translateX(4px) rotate(-45deg);
+      }
+    }
   }
 }
 
@@ -94,14 +124,24 @@
     height: 30px;
     margin-right: 9px;
     fill: #fff;
+    stroke: $main-color;
   }
 
   a {
     color: inherit;
     text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid;
+  }
+
+  &:hover {
+    color: $active-color;
+
+    svg {
+      stroke: $active-color;
+    }
   }
 }
-
 
 .main-nav__burger-input,
 .main-nav__burger-lines {
@@ -109,7 +149,7 @@
 
   @media (max-width: $tablet-width) {
     display: flex;
-    z-index: 20;    
+    z-index: 20;
   }
 }
 
