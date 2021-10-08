@@ -166,7 +166,7 @@ const build = gulp.series(
     styles,
     html,
     sprite,
-    // scripts,
+    scripts,
     createWebp,
     createAvif
   ),
@@ -179,7 +179,7 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
-    // scripts,
+    scripts,
   ),
   gulp.series(
     server,

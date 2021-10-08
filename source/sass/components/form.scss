@@ -1,0 +1,201 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 100%;
+  max-width: 728px;
+  max-height: 90vh;
+  margin: 10px 10px 0 10px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $main-background-color;
+  box-shadow: 0 10px 20px -6px $main-color;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.form__img {
+  width: 100%;
+  height: 100%;
+}
+
+.form__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: none;
+  top: 7px;
+  right: 7px;
+  cursor: pointer;
+  background-color: $main-background-color;
+
+  div {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: transform .3s;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 50%;  /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+      background-color: $main-color;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &:hover {
+    div {
+      transform: rotate(180deg);
+      transition: transform .3s;
+    }
+  }
+}
+
+.form__first-page {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+.form__title {
+  font-family: "Montserrat-SemiBold", "Arial", sans-serif;
+  font-size: 1.56rem;
+  line-height: 2.6rem;
+  margin: 0 0 50px 0;
+  text-align: center;
+}
+
+.form__description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.form__wrapper {
+  margin-bottom: 20px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: .875rem;
+  line-height: 1.125rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  input {
+    padding: 15px;
+    border: 1px solid rgba($main-color, .3);
+    outline: none;
+    background-color: $main-background-color;
+    color: $main-color;
+    cursor: pointer;
+    font-size: .875rem;
+    line-height: 1.125rem;
+
+    &::placeholder {
+      color: $main-color;
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $main-color;
+    }
+  }
+
+  &.error {
+    position: relative;
+
+    &:before {
+      content: "";
+      font-size: 1rem;
+      line-height: 1.6rem;
+      position: absolute;
+      width: 90%;
+      height: auto;
+      padding: 12px;
+      box-sizing: border-box;
+      bottom: -4px;
+      left: 50%;
+      transform: translate(-50%,100%);
+      border-radius: 10px;
+      border: 2px solid #2f1f18;
+      color: #2f1f18;
+      background-color: #efecec;
+
+      z-index: 1010;
+    }
+
+    &:after {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background-color: #efecec;
+      left: 10%;
+      bottom: -11px;
+      position: absolute;
+      border-left: 2px solid #2f1f18;
+      border-top: 2px solid #2f1f18;
+      transform: rotate(45deg);
+      z-index: 1011;
+    }
+
+    input {
+      border-color: rgba(red, .5);
+      box-shadow: 0 0 15px red;
+      animation: 1.5s ease-in-out trambling;
+    }
+  }
+
+  &.form__field--phone.error:before {
+    content: "Неверный формат номера. Пример: 8900 000 0000";
+  }
+
+  &.form__field--email.error:before {
+    content: "Неверный email формат. Пример: vasya@mail.ru";
+  }
+}
+
+.form__button {
+  padding: 18px 40px;
+  align-self: center;
+}
+
+.form__first-page.close{
+  display: none;
+}
+
+.form__second-page {
+  display: none;
+
+  &.open {
+    display: block;
+  }
+}
