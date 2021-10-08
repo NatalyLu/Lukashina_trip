@@ -1,0 +1,13 @@
+.wrapper-bg {
+  display: block;
+  background-image: url('/img/svg/background.svg');
+  background-position: top 130px center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    min-height: auto;
+    background: none;
+  }
+}

@@ -62,7 +62,9 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin: 0 -35px -35px 0;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 0 -35px 0;
   }
 }
 
@@ -74,7 +76,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin: 0 35px 35px 0;
+    margin: 0 0 35px 0;
   }
 
   img {
@@ -83,6 +85,11 @@
     @media (max-width: $tablet-width) {
       max-width: 288px;
       max-height: 425px;
+    }
+
+    @media (max-width: $mobile-width) {
+      max-width: 100%;
+      width: 100%;
     }
   }
 }

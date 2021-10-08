@@ -31,10 +31,10 @@
         </label>
         <ul class="main-nav__list">
           <li>
-            <a href="#" class="main-nav__link">О путешествии</a>
+            <a href="#areas-list" class="main-nav__link">О путешествии</a>
           </li>
           <li>
-            <a href="#" class="main-nav__link" >Цены</a>
+            <a href="#price" class="main-nav__link" >Цены</a>
           </li>
         </ul>
         <div class="main-nav__phone">
@@ -58,7 +58,7 @@
             В этом туре вы откроете для себя Европу в новом свете. 
             Вас ждет: море, горы, а также потрясающая красота природы.
           </p>
-          <a href="" class="introduce__button button button--arrow">
+          <a href="#areas-tabs" class="introduce__button button button--arrow">
             смотреть тур
             <svg width="32" height="24" viewBox="0 0 16 16">
               <use xlink:href="/img/svg/sprite.svg#arrow"></use>
@@ -67,7 +67,7 @@
         </div>
       </section>
 
-      <section class="areas">
+      <section class="areas" id="areas-list">
         <h2 class="areas__title main-title main-title--underline">Места посещения</h2>
         <p class="areas__description">
           Вы можете выбрать полный тур или частичный, с посещением первых 3 мест
@@ -126,24 +126,24 @@
         </ul>
       </section>
 
-      <section class="tabs">
-        <div class="tabs__wrapper">
+      <div class="wrapper-bg">
+        <section class="tabs" id="areas-tabs">
           <h2 class="visually-hidden">Подробнее о направлениях путешествия</h2>
           <nav class="tabs__items">
             <a href="#area1" class="tabs__item">Греция</a>
             <a href="#area2" class="tabs__item">Албания</a>
-            <!-- <a href="#area3" class="tabs__item">Македония</a>
+            <a href="#area3" class="tabs__item">Македония</a>
             <a href="#area4" class="tabs__item">Черногория</a>
-            <a href="#area5" class="tabs__item">Хорватия</a> -->
+            <a href="#area5" class="tabs__item">Хорватия</a>
           </nav>
           <div class="tabs__body">
             <div id="area1" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Греция</h3>
-                <p class="tabs__description">
+                <h3 class="tab__title main-title main-title--underline">Греция</h3>
+                <p class="tab__description">
                   На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. 
                 </p>
-                <a href="#" class="tabs__button button">
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -170,9 +170,11 @@
 
             <div id="area2" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Албания</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Албания</h3>
+                <p class="tab__description">
+                  В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
+                </p>
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -183,23 +185,27 @@
               </picture>
               <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Маришка</span>
                 </div>
               </div>
             </div>
 
-            <!-- <div id="area3" class="tabs__tab tab">
+            <div id="area3" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Македония</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Македония</h3>
+                <p class="tab__description">
+                  В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
+                </p>
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -210,23 +216,27 @@
               </picture>
               <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Михаил Кузьмин</span>
                 </div>
               </div>
             </div>
 
             <div id="area4" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Греция</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Черногория</h3>
+                <p class="tab__description">
+                  Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
+                </p>
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -235,25 +245,29 @@
                 <source srcset="/img/areas/area-4.webp 1x, /img/areas/area-4@2x.webp 2x" type="image/webp">
                 <img class="tab__img" src="/img/areas/area-4.jpg" srcset="/img/areas/area-4@2x.jpg 2x" width="430" height="596" alt="фото реки с высоты Черногории">
               </picture>
-              <div class="tab__review">
+              <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Анастасия Мей</span>
                 </div>
               </div>
             </div>
 
             <div id="area5" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Хорватия</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Хорватия</h3>
+                <p class="tab__description">
+                  В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.
+                </p>
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -264,59 +278,140 @@
               </picture>
               <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Владимир Мулицин</span>
                 </div>
               </div>
-            </div> -->
+            </div>
 
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="price" id="price">
+          <div class="price__text">
+            <h2 class="price__title main-title main-title--underline">Цены</h2>
+            <p class="price__description">
+              Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
+            </p>
+            <div class="price__call">
+              <span class="price__span">Свяжитесь с нами</span>
+              <svg width="32" height="24" viewBox="0 0 30 30">
+                <use xlink:href="/img/svg/sprite.svg#phone"></use>
+              </svg>
+              <a class="price__phone" href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи">+7 (499) -784-684-46</a>
+            </div>
+          </div>
+
+          <div class="tariff">
+            <h3 class="tariff__title">Комплексный <span>$1999</span></h3>
+            <p class="tariff__description">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+            <ul class="tariff__list">
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Разработанный маршрут с гидом группы</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Перелет, трансфер и проживание в отелях</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Завтраки, ужины в отелях и ланчи на природе</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Экскурсии по удивительно красивым местам Европы</span>
+              </li>
+            </ul>
+            <a href="#" class="tariff__button button button-callback">
+              купить тур сейчас
+            </a>
+          </div>
+
+          <div class="tariff">
+            <h3 class="tariff__title">Экономный <span>$1399</span></h3>
+            <p class="tariff__description">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+            <ul class="tariff__list">
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Разработанный маршрут с гидом группы</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Перелет и трансфер</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Проживание в хостелах при отелях</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Только завтраки в отелях</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Экскурсии по удивительно красивым местам Европы</span>
+              </li>
+            </ul>
+            <a href="#" class="tariff__button button button-callback">
+              купить тур сейчас
+            </a>
+          </div>
+        </section>
+      </div>
 
       <section class="popup" id="popup-call">
-        <form action="/phpmailer/callback.php" method="POST" class="popup__form form">
+        <form action="#" method="POST" class="popup__form form">
           <button class="form__close">
             <div><span class="visually-hidden">Закрыть</span></div>
           </button>
+          <picture>
+            <source srcset="/img/areas/area-1.avif 1x, /img/areas/area-1@2x.avif 2x" type="image/avif">
+            <source srcset="/img/areas/area-1.webp 1x, /img/areas/area-1@2x.webp 2x" type="image/webp">
+            <img class="form__img" src="/img/areas/area-1.jpg" srcset="/img/areas/area-1@2x.jpg 2x" width="338" height="444" alt="Дом на горе">
+          </picture>
           <div class="form__first-page">
-            <h2 class="sub-title form__title">Записаться</h2>
+            <h2 class="form__title">Купить тур</h2>
             <div class="form__wrapper">
-              <div class="form__field form__field--name">
-                <label class="form__label" for="name">Ваше имя</label>
-                <input type="text" id="name" name="name" placeholder="Альберт Эйнштейн" autofocus="autofocus" maxlength="100">
-              </div>
               <div class="form__field form__field--phone">
-                <label class="form__label" for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" placeholder="8999-000-11-22" maxlength="40" required="true">
+                <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" required="true">
               </div>
-              <div class="form__field form__field--select">
-                <label class="form__label" for="time">Удобное время для звонка:</label>
-                <select class="form__select" id="time" name="time">
-                  <option selected disabled>Выбрать</option>
-                  <option value="8-10">8 - 10</option>
-                  <option value="10-12">10 - 12</option>
-                  <option value="12-14">12 - 14</option>
-                  <option value="14-16">14 - 16</option>
-                  <option value="16-18">16 - 18</option>
-                  <option value="18-20">18 - 20</option>
-                  <option selected value="any">Любое</option>
-                </select>
+              <div class="form__field form__field--email">
+                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100">
               </div>
             </div>
-            <button class="button" name="submit" type="submit">Отправить</button>
+            <button class="form__button button" name="submit" type="submit">Отправить</button>
           </div>
           <div class="form__second-page">
-            <h2 class="sub-title form__title">Спасибо!</h2>
             <p class="form__description">
-              <span>Мы получили вашу заявку и свяжемся с вами в указанное время.</span>
-              <span>Хорошего дня!</span>
+              <span>Форма успешно отправлена,</span>
+              <span>спасибо! :)</span>
             </p>
           </div>
         </form>
@@ -324,33 +419,7 @@
     </main>
 
     <footer class="footer">
-      <b class="visually-hidden">Мы в социальных сетях</b>
-      <ul class="footer__social-list">
-        <li>
-          <a class="social-list__item" href="https://www.instagram.com/ege_academy_nn/">
-            <svg width="32" height="24">
-              <use xlink:href="/img/svg/sprite.svg#instagram"></use>
-            </svg>
-            <span>Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a class="social-list__item" href="https://t.me/ege_nn">
-            <svg width="32" height="24">
-              <use xlink:href="/img/svg/sprite.svg#telegram"></use>
-            </svg>
-            <span>Telegram</span>
-          </a>
-        </li>
-        <li>
-          <a class="social-list__item" href="https://wa.me/79038466777?text=Здравствуйте,%20меня%20интересует%20">
-            <svg width="32" height="24">
-              <use xlink:href="/img/svg/sprite.svg#whatsapp"></use>
-            </svg>
-            <span>Whatsapp</span>
-          </a>
-        </li>
-      </ul>
+
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
   </body>

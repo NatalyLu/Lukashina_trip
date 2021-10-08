@@ -1,22 +1,14 @@
 $tablet-width: 1023px;
 $mobile-width: 767px;
-// $desktop-width: 1200px;
 
-$max-width: 1322px; // 1170 + 76*2 => 76- для падингов;
+$max-width: 1210px; // 1170 + 20*2 => 20- для падингов;
 
 $main-color: #141517;
 $sub-dark-color: #2C2E3F;
 $opacity-sub-dark: rgba($sub-dark-color, .7);
+$strong-opacity-sub-dark:  rgba($sub-dark-color, .3);
 $active-color: #FE7865;
 $sub-active-color: #F17D4B;
 $main-background-color: #fff;
 $text-light: $main-background-color;
 $light-background: #FBF8F8;
-// $light: #DADADA;
-
-// $text-alt-color: pink;
-// $text-active-color: red;
-// $text-active-hover-color: blue;
-// $background-color: gray;
-// $border-color: yellow;
-// $background-color-darken: rgba(65, 57, 57, 0.096);
