@@ -143,7 +143,7 @@
                 <p class="tab__description">
                   На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. 
                 </p>
-                <a href="#" class="tab__button button">
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -174,7 +174,7 @@
                 <p class="tab__description">
                   В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
                 </p>
-                <a href="#" class="tab__button button">
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -205,7 +205,7 @@
                 <p class="tab__description">
                   В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
                 </p>
-                <a href="#" class="tab__button button">
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -236,7 +236,7 @@
                 <p class="tab__description">
                   Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
                 </p>
-                <a href="#" class="tab__button button">
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -267,7 +267,7 @@
                 <p class="tab__description">
                   В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.
                 </p>
-                <a href="#" class="tab__button button">
+                <a href="#" class="tab__button button button-callback">
                   купить тур сейчас
                 </a>
               </div>
@@ -297,7 +297,7 @@
 
         <section class="price" id="price">
           <div class="price__text">
-            <h2 class="main-title main-title--underline">Цены</h2>
+            <h2 class="price__title main-title main-title--underline">Цены</h2>
             <p class="price__description">
               Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
             </p>
@@ -339,7 +339,7 @@
                 <span>Экскурсии по удивительно красивым местам Европы</span>
               </li>
             </ul>
-            <a href="#" class="tariff__button button">
+            <a href="#" class="tariff__button button button-callback">
               купить тур сейчас
             </a>
           </div>
@@ -379,7 +379,7 @@
                 <span>Экскурсии по удивительно красивым местам Европы</span>
               </li>
             </ul>
-            <a href="#" class="tariff__button button">
+            <a href="#" class="tariff__button button button-callback">
               купить тур сейчас
             </a>
           </div>
@@ -387,42 +387,31 @@
       </div>
 
       <section class="popup" id="popup-call">
-        <form action="/phpmailer/callback.php" method="POST" class="popup__form form">
+        <form action="#" method="POST" class="popup__form form">
           <button class="form__close">
             <div><span class="visually-hidden">Закрыть</span></div>
           </button>
+          <picture>
+            <source srcset="/img/areas/area-1.avif 1x, /img/areas/area-1@2x.avif 2x" type="image/avif">
+            <source srcset="/img/areas/area-1.webp 1x, /img/areas/area-1@2x.webp 2x" type="image/webp">
+            <img class="form__img" src="/img/areas/area-1.jpg" srcset="/img/areas/area-1@2x.jpg 2x" width="338" height="444" alt="Дом на горе">
+          </picture>
           <div class="form__first-page">
-            <h2 class="sub-title form__title">Записаться</h2>
+            <h2 class="form__title">Купить тур</h2>
             <div class="form__wrapper">
-              <div class="form__field form__field--name">
-                <label class="form__label" for="name">Ваше имя</label>
-                <input type="text" id="name" name="name" placeholder="Альберт Эйнштейн" autofocus="autofocus" maxlength="100">
-              </div>
               <div class="form__field form__field--phone">
-                <label class="form__label" for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" placeholder="8999-000-11-22" maxlength="40" required="true">
+                <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" required="true">
               </div>
-              <div class="form__field form__field--select">
-                <label class="form__label" for="time">Удобное время для звонка:</label>
-                <select class="form__select" id="time" name="time">
-                  <option selected disabled>Выбрать</option>
-                  <option value="8-10">8 - 10</option>
-                  <option value="10-12">10 - 12</option>
-                  <option value="12-14">12 - 14</option>
-                  <option value="14-16">14 - 16</option>
-                  <option value="16-18">16 - 18</option>
-                  <option value="18-20">18 - 20</option>
-                  <option selected value="any">Любое</option>
-                </select>
+              <div class="form__field form__field--email">
+                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100">
               </div>
             </div>
-            <button class="button" name="submit" type="submit">Отправить</button>
+            <button class="form__button button" name="submit" type="submit">Отправить</button>
           </div>
           <div class="form__second-page">
-            <h2 class="sub-title form__title">Спасибо!</h2>
             <p class="form__description">
-              <span>Мы получили вашу заявку и свяжемся с вами в указанное время.</span>
-              <span>Хорошего дня!</span>
+              <span>Форма успешно отправлена,</span>
+              <span>спасибо! :)</span>
             </p>
           </div>
         </form>
@@ -430,33 +419,7 @@
     </main>
 
     <footer class="footer">
-      <b class="visually-hidden">Мы в социальных сетях</b>
-      <ul class="footer__social-list">
-        <li>
-          <a class="social-list__item" href="https://www.instagram.com/ege_academy_nn/">
-            <svg width="32" height="24">
-              <use xlink:href="/img/svg/sprite.svg#instagram"></use>
-            </svg>
-            <span>Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a class="social-list__item" href="https://t.me/ege_nn">
-            <svg width="32" height="24">
-              <use xlink:href="/img/svg/sprite.svg#telegram"></use>
-            </svg>
-            <span>Telegram</span>
-          </a>
-        </li>
-        <li>
-          <a class="social-list__item" href="https://wa.me/79038466777?text=Здравствуйте,%20меня%20интересует%20">
-            <svg width="32" height="24">
-              <use xlink:href="/img/svg/sprite.svg#whatsapp"></use>
-            </svg>
-            <span>Whatsapp</span>
-          </a>
-        </li>
-      </ul>
+
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
   </body>

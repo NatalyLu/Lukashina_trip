@@ -7,6 +7,15 @@
   padding: 40px 30px 30px 30px;
   font-family: "Montserrat-Regular", "Arial", sans-serif;
 
+  @media (max-width: $tablet-width) {
+    max-width: 288px;
+    padding: 30px 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 450px;
+  }
+
   &:hover {
     border-color: $active-color;
     transition: all .3s ease;
@@ -26,21 +35,44 @@
 .tariff__title {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-family: "Montserrat-SemiBold", "Arial", sans-serif;
   font-size: 1.75rem;
   line-height: 2.375rem;
   margin: 0 0 36px 0;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    margin-bottom: 11px;
+  }
+
+  span {
+    @media (max-width: $tablet-width) {
+      margin-top: 10px;
+    }
+  }
 }
 
 .tariff__description {
   padding-bottom: 28px;
   margin: 0 0 30px 0;
   border-bottom: 1px solid $strong-opacity-sub-dark;
+  line-height: 1.5rem;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+  }
 }
 
 .tariff__list {
   @include drop__list-style;
   margin-bottom: 30px;
+  line-height: 2rem;
 }
 
 .tariff__component {
@@ -56,6 +88,10 @@
   svg {
     padding-top: 8px;
     fill: $active-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
   }
 }
 

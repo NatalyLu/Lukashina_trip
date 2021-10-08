@@ -7,7 +7,12 @@
 
   @media (max-width: $tablet-width) {
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 45px;
   }
 }
 
