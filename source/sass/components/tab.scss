@@ -1,28 +1,86 @@
 .tab {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
+  grid-template-columns: 1fr minmax(270px, 430px) 230px;
+  gap: 0 100px;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tab__info {
   max-width: 370px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 16px;
+    margin-bottom: 50px;
+  }
+}
+
+.tab__title {
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+    padding: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.tab__description {
+  margin: 0 0 50px 0;
+  color: $opacity-sub-dark;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.tab__button {
+  max-width: 250px;
 }
 
 .tab__img {
-  max-width: 430px;
+  width: 100%;
   max-height: 596px;
+
+  @media (max-width: $tablet-width) {
+    max-height: 415px;
+    height: 415px;
+    object-fit: cover;
+    object-position: left bottom;
+  }
 }
 
-
-
-// review
 .tab__review {
-  position: absolute;
-  top: 114px;
-  right: -270px;
-  // margin-right: 112px;
+  position: relative;
+  right: 210px;
+  margin-right: -210px;
+
+  @media (max-width: $tablet-width) {
+    right: -50%;
+    margin-right: 0;
+    top: -335px;
+    transform: translate(-50%, 0);
+  }
+
+  @media (max-width: $mobile-width) {
+    top: -365px;
+    margin-bottom: -365px;
+  }
 }
 
 

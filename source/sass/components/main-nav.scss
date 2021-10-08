@@ -72,6 +72,7 @@
 .main-nav__link {
   color: inherit;
   text-decoration: none;
+  transition: all .3s ease;
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -114,6 +115,7 @@
   align-items: center;
   font-family: "Montserrat-Regular", "Arial", sans-serif;
   font-size: 1.125rem;
+  transition: all .3s ease;
 
   @media (max-width: $tablet-width) {
     display: none;
@@ -125,6 +127,7 @@
     margin-right: 9px;
     fill: #fff;
     stroke: $main-color;
+    transition: all .3s ease;
   }
 
   a {

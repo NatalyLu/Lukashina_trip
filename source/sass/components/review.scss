@@ -3,17 +3,47 @@
   flex-direction: column;
   min-width: 382px;
   width: 382px;
-  padding: 33px 30px 30px 30px;
+  padding: 30px;
   background-color: $main-background-color;
   box-sizing: border-box;
+
+  @media (max-width: $mobile-width) {
+    width: 85%;
+    min-width: 85%;
+  }
+
+  @media (max-width: $mobile-width) {
+    align-items: center;
+  }
 }
 
 .review__title {
+  align-self: flex-start;
   font-family: "Montserrat-Medium", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.3rem;
   padding-bottom: 7px;
   margin-bottom: 20px;
+
+  &.main-title--underline:after {
+    height: 1px;
+
+    @media (max-width: $mobile-width) {
+      width: 96%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    align-self: center;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
 .review__description {
@@ -21,14 +51,24 @@
   font-size: 0.875rem;
   line-height: 1.75rem;
   margin: 0 0 35px 0;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
 }
 
 .review__author {
   display: grid;
   grid-template-columns: 38px 1fr;
   align-items: center;
-  gap: 0 16px;
+  gap: 10px 16px;
+  color: $sub-dark-color;
 
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 .review__img {
@@ -39,4 +79,5 @@
   font-family: "Montserrat-Medium", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.25rem;
+  color: inherit;
 }

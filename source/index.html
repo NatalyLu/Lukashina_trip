@@ -31,10 +31,10 @@
         </label>
         <ul class="main-nav__list">
           <li>
-            <a href="#" class="main-nav__link">О путешествии</a>
+            <a href="#areas-list" class="main-nav__link">О путешествии</a>
           </li>
           <li>
-            <a href="#" class="main-nav__link" >Цены</a>
+            <a href="#price" class="main-nav__link" >Цены</a>
           </li>
         </ul>
         <div class="main-nav__phone">
@@ -58,7 +58,7 @@
             В этом туре вы откроете для себя Европу в новом свете. 
             Вас ждет: море, горы, а также потрясающая красота природы.
           </p>
-          <a href="" class="introduce__button button button--arrow">
+          <a href="#areas-tabs" class="introduce__button button button--arrow">
             смотреть тур
             <svg width="32" height="24" viewBox="0 0 16 16">
               <use xlink:href="/img/svg/sprite.svg#arrow"></use>
@@ -67,7 +67,7 @@
         </div>
       </section>
 
-      <section class="areas">
+      <section class="areas" id="areas-list">
         <h2 class="areas__title main-title main-title--underline">Места посещения</h2>
         <p class="areas__description">
           Вы можете выбрать полный тур или частичный, с посещением первых 3 мест
@@ -126,24 +126,24 @@
         </ul>
       </section>
 
-      <section class="tabs">
-        <div class="tabs__wrapper">
+      <div class="wrapper-bg">
+        <section class="tabs" id="areas-tabs">
           <h2 class="visually-hidden">Подробнее о направлениях путешествия</h2>
           <nav class="tabs__items">
             <a href="#area1" class="tabs__item">Греция</a>
             <a href="#area2" class="tabs__item">Албания</a>
-            <!-- <a href="#area3" class="tabs__item">Македония</a>
+            <a href="#area3" class="tabs__item">Македония</a>
             <a href="#area4" class="tabs__item">Черногория</a>
-            <a href="#area5" class="tabs__item">Хорватия</a> -->
+            <a href="#area5" class="tabs__item">Хорватия</a>
           </nav>
           <div class="tabs__body">
             <div id="area1" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Греция</h3>
-                <p class="tabs__description">
+                <h3 class="tab__title main-title main-title--underline">Греция</h3>
+                <p class="tab__description">
                   На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. 
                 </p>
-                <a href="#" class="tabs__button button">
+                <a href="#" class="tab__button button">
                   купить тур сейчас
                 </a>
               </div>
@@ -170,9 +170,11 @@
 
             <div id="area2" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Албания</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Албания</h3>
+                <p class="tab__description">
+                  В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
+                </p>
+                <a href="#" class="tab__button button">
                   купить тур сейчас
                 </a>
               </div>
@@ -183,23 +185,27 @@
               </picture>
               <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Маришка</span>
                 </div>
               </div>
             </div>
 
-            <!-- <div id="area3" class="tabs__tab tab">
+            <div id="area3" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Македония</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Македония</h3>
+                <p class="tab__description">
+                  В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
+                </p>
+                <a href="#" class="tab__button button">
                   купить тур сейчас
                 </a>
               </div>
@@ -210,23 +216,27 @@
               </picture>
               <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Михаил Кузьмин</span>
                 </div>
               </div>
             </div>
 
             <div id="area4" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Греция</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Черногория</h3>
+                <p class="tab__description">
+                  Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
+                </p>
+                <a href="#" class="tab__button button">
                   купить тур сейчас
                 </a>
               </div>
@@ -235,25 +245,29 @@
                 <source srcset="/img/areas/area-4.webp 1x, /img/areas/area-4@2x.webp 2x" type="image/webp">
                 <img class="tab__img" src="/img/areas/area-4.jpg" srcset="/img/areas/area-4@2x.jpg 2x" width="430" height="596" alt="фото реки с высоты Черногории">
               </picture>
-              <div class="tab__review">
+              <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Анастасия Мей</span>
                 </div>
               </div>
             </div>
 
             <div id="area5" class="tabs__tab tab">
               <div class="tab__info">
-                <h3 class="tabs__title main-title main-title--underline">Хорватия</h3>
-                <p class="tabs__description"></p>
-                <a href="#" class="tabs__button button">
+                <h3 class="tab__title main-title main-title--underline">Хорватия</h3>
+                <p class="tab__description">
+                  В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.
+                </p>
+                <a href="#" class="tab__button button">
                   купить тур сейчас
                 </a>
               </div>
@@ -264,21 +278,113 @@
               </picture>
               <div class="tab__review review">
                 <h4 class="review__title main-title main-title--underline">Отзывы</h4>
-                <p class="review__description"></p>
+                <p class="review__description">
+                  Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
+                </p>
                 <div class="review__author">
                   <picture>
                     <source srcset="/img/reviews/author-1.avif 1x, /img/reviews/author-1@2x.avif 2x" type="image/avif">
                     <source srcset="/img/reviews/author-1.webp 1x, /img/reviews/author-1@2x.webp 2x" type="image/webp">
                     <img class="review__img" src="/img/reviews/author-1.jpg" srcset="/img/reviews/author-1@2x.jpg 2x" width="38" height="38" alt="Фото автора">
                   </picture>
-                  <span class="review__name">Влада Голицина</span>
+                  <span class="review__name">Владимир Мулицин</span>
                 </div>
               </div>
-            </div> -->
+            </div>
 
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="price" id="price">
+          <div class="price__text">
+            <h2 class="main-title main-title--underline">Цены</h2>
+            <p class="price__description">
+              Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
+            </p>
+            <div class="price__call">
+              <span class="price__span">Свяжитесь с нами</span>
+              <svg width="32" height="24" viewBox="0 0 30 30">
+                <use xlink:href="/img/svg/sprite.svg#phone"></use>
+              </svg>
+              <a class="price__phone" href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи">+7 (499) -784-684-46</a>
+            </div>
+          </div>
+
+          <div class="tariff">
+            <h3 class="tariff__title">Комплексный <span>$1999</span></h3>
+            <p class="tariff__description">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+            <ul class="tariff__list">
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Разработанный маршрут с гидом группы</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Перелет, трансфер и проживание в отелях</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Завтраки, ужины в отелях и ланчи на природе</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Экскурсии по удивительно красивым местам Европы</span>
+              </li>
+            </ul>
+            <a href="#" class="tariff__button button">
+              купить тур сейчас
+            </a>
+          </div>
+
+          <div class="tariff">
+            <h3 class="tariff__title">Экономный <span>$1399</span></h3>
+            <p class="tariff__description">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+            <ul class="tariff__list">
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Разработанный маршрут с гидом группы</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Перелет и трансфер</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Проживание в хостелах при отелях</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Только завтраки в отелях</span>
+              </li>
+              <li class="tariff__component">
+                <svg width="14" height="12" viewBox="0 0 14 12">
+                  <use xlink:href="/img/svg/sprite.svg#tick"></use>
+                </svg>
+                <span>Экскурсии по удивительно красивым местам Европы</span>
+              </li>
+            </ul>
+            <a href="#" class="tariff__button button">
+              купить тур сейчас
+            </a>
+          </div>
+        </section>
+      </div>
 
       <section class="popup" id="popup-call">
         <form action="/phpmailer/callback.php" method="POST" class="popup__form form">
