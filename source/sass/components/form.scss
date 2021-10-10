@@ -1,9 +1,12 @@
 .form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 100%;
   max-width: 728px;
+  min-height: 444px;
   max-height: 90vh;
   margin: 10px 10px 0 10px;
   padding: 0;
@@ -11,16 +14,12 @@
   background-color: $main-background-color;
   box-shadow: 0 10px 20px -6px $main-color;
   overflow-y: scroll;
+  color: $popup-color;
 
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-}
-
-.form__img {
-  width: 100%;
-  height: 100%;
 }
 
 .form__close {
@@ -71,10 +70,27 @@
 }
 
 .form__first-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+
+  &.close{
+    display: none;
+  }
+}
+
+.form__img {
+  display: block;
+  grid-row: 1/-1;
+  grid-column: 1/2;
+  width: 100%;
+}
+
+.form__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 60px;
-  box-sizing: border-box;
 }
 
 .form__title {
@@ -85,34 +101,34 @@
   text-align: center;
 }
 
+.form__second-page {
+  display: none;
+  padding: 60px;
+  box-sizing: border-box;
+
+  &.open {
+    display: flex;
+  }
+}
+
 .form__description {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  font-size: 1.4rem;
+  text-align: center;
+  font-size: 1.56rem;
   line-height: 2rem;
   margin: 0;
-}
-
-.form__wrapper {
-  margin-bottom: 20px;
 }
 
 .form__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  font-size: .875rem;
-  line-height: 1.125rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   input {
     padding: 15px;
     border: 1px solid rgba($main-color, .3);
-    outline: none;
     background-color: $main-background-color;
     color: $main-color;
     cursor: pointer;
@@ -134,68 +150,28 @@
     position: relative;
 
     &:before {
-      content: "";
-      font-size: 1rem;
-      line-height: 1.6rem;
+      content: "Данные не верны";
       position: absolute;
-      width: 90%;
+      width: 100%;
       height: auto;
-      padding: 12px;
+      bottom: 100%;
+      left: 0;
+      font-size: .75rem;
+      line-height: 1rem;
+      color: $active-color;
       box-sizing: border-box;
-      bottom: -4px;
-      left: 50%;
-      transform: translate(-50%,100%);
-      border-radius: 10px;
-      border: 2px solid #2f1f18;
-      color: #2f1f18;
-      background-color: #efecec;
-
-      z-index: 1010;
-    }
-
-    &:after {
-      content: "";
-      width: 11px;
-      height: 11px;
-      background-color: #efecec;
-      left: 10%;
-      bottom: -11px;
-      position: absolute;
-      border-left: 2px solid #2f1f18;
-      border-top: 2px solid #2f1f18;
-      transform: rotate(45deg);
-      z-index: 1011;
     }
 
     input {
-      border-color: rgba(red, .5);
-      box-shadow: 0 0 15px red;
-      animation: 1.5s ease-in-out trambling;
+      border-color: $active-color;
     }
-  }
-
-  &.form__field--phone.error:before {
-    content: "Неверный формат номера. Пример: 8900 000 0000";
-  }
-
-  &.form__field--email.error:before {
-    content: "Неверный email формат. Пример: vasya@mail.ru";
   }
 }
 
 .form__button {
   padding: 18px 40px;
+  width: max-content;
   align-self: center;
-}
-
-.form__first-page.close{
-  display: none;
-}
-
-.form__second-page {
-  display: none;
-
-  &.open {
-    display: block;
-  }
+  font-size: .75rem;
+  line-height: 1rem;
 }

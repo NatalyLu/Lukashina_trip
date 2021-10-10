@@ -33,6 +33,7 @@ let openPopup = (evt, popup) => {
   if (popup.querySelector(".form__first-page").classList.contains("close")) {
     popup.querySelector(".form__first-page").classList.remove("close");
   }
+  popup.querySelector("#phone").select();
   popup.classList.add("popup--active");
   popup.querySelector(".form__close").addEventListener("click", evt => closePopup(evt, popup));
   popup.querySelector(".form__close").addEventListener("keydown", evt => closePopupKeyDown(evt, popup));
@@ -81,8 +82,8 @@ let moveToNextPage = (popup) => {
 let moveToErrorPage = (popup) => {
   popup.querySelector(".form").reset();
   popup.classList.remove("sending");
-  popup.querySelector(".form__second-page").querySelector(".form__title").innerHTML = "Ошибка";
-  popup.querySelector(".form__second-page").querySelector(".form__description").innerHTML = "Сбой при отправке формы. Пожалуйста, попробуйте отправить данные позднее.";
+  popup.querySelector(".form__second-page").querySelector("#first-line").innerHTML = "Ошибка";
+  popup.querySelector(".form__second-page").querySelector("#second-line").innerHTML = "Сбой при отправке формы. Пожалуйста, попробуйте отправить данные позднее.";
   popup.querySelector(".form__first-page").classList.add("close");
   popup.querySelector(".form__second-page").classList.add("open");
 }
