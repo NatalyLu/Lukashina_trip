@@ -3,8 +3,6 @@
   let targetItems = document.querySelectorAll(".button-callback");
   let fields = popup.querySelectorAll(".form__field");
 
-  console.log(targetItems);
-
   [].slice.call(targetItems).forEach(item => {
     item.addEventListener("click", (evt) => {
       evt.preventDefault();

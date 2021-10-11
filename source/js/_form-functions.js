@@ -1,8 +1,28 @@
 
 let html = document.getElementById("html");
 
+var isStorageSupport = true;
+var storagePhone = "";
+var storageEmail = "";
+
+
+try {
+  storagePhone = localStorage.getItem("phone");
+  storageEmail = localStorage.getItem("email");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+let getStorage = (popup) => {
+  var phone = popup.querySelector("[name='phone']");
+  var email = popup.querySelector("[name='email']");
+  if (localStorage){
+    phone.value = storagePhone;
+    email.value = storageEmail;
+  }
+}
+
 let closePopupKeyDown = (evt, popup) => {
-  console.log(evt);
   if (evt.keyCode === window.util.ENTER_KEYCODE) {
     closePopup(evt, popup);
   }
@@ -33,6 +53,7 @@ let openPopup = (evt, popup) => {
   if (popup.querySelector(".form__first-page").classList.contains("close")) {
     popup.querySelector(".form__first-page").classList.remove("close");
   }
+  getStorage(popup);
   popup.querySelector("#phone").select();
   popup.classList.add("popup--active");
   popup.querySelector(".form__close").addEventListener("click", evt => closePopup(evt, popup));
@@ -92,6 +113,10 @@ let sendFormData = async (evt, popup, url) => {
   evt.preventDefault();
   let errors = checkValidate(popup.querySelector(".form"));
   if (errors === 0) {
+    if (isStorageSupport) {
+      localStorage.setItem("phone", phone.value);
+      localStorage.setItem("email", email.value);
+    }
     popup.classList.add("sending");
     let response = await fetch(url, {
       method: "POST",

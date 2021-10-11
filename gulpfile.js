@@ -122,9 +122,13 @@ exports.copy = copy;
 // Server
 const server = (done) => {
   sync.init({
+    ui: {
+      port: 3001
+    },
     server: {
       baseDir: "build"
     },
+    port: 3001,
     cors: true,
     notify: false,
     ui: false,
