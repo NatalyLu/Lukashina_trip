@@ -34,15 +34,24 @@ let closeEsc = (evt, popup) => {
   }
 }
 
+let checkCloseArea = (evt, popup) => {
+  if (evt.target.classList === popup.classList) {
+    closePopup(evt, popup);
+  }
+}
+
 let closePopup = (evt, popup) => {
   evt.preventDefault();
   // Если была открыта 2 "страница" формы, то прячем их
   // Класс отвечающщий за скрытие первой страницы уберем при открытии попапа, чтобы анимация исчезновения не пострадала
   popup.querySelector(".form__second-page").classList.remove("open");
   popup.classList.remove("popup--active");
+
+  popup.removeEventListener("click", evt => checkCloseArea(evt, popup));  
   popup.querySelector(".form__close").removeEventListener("click", evt => closePopup(evt, popup));
   popup.querySelector(".form__close").removeEventListener("keydown", evt => closePopupKeyDown(evt, popup));
   window.removeEventListener("keydown", evt => closeEsc(evt, popup));
+
   // Отмена запрета скрола страницы
   html.classList.remove("lock");
 }
@@ -56,9 +65,12 @@ let openPopup = (evt, popup) => {
   getStorage(popup);
   popup.querySelector("#phone").select();
   popup.classList.add("popup--active");
+
+  popup.addEventListener("click", evt => checkCloseArea(evt, popup));  
   popup.querySelector(".form__close").addEventListener("click", evt => closePopup(evt, popup));
   popup.querySelector(".form__close").addEventListener("keydown", evt => closePopupKeyDown(evt, popup));
   window.addEventListener("keydown", evt => closeEsc(evt, popup));
+
   // Запрет скрола страницы
   html.classList.add("lock");
 }
