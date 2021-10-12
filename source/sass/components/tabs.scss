@@ -1,5 +1,3 @@
-
-
 .tabs {
   @include center;
   max-width: calc(1170px + 100px);
@@ -60,7 +58,8 @@
 .tabs__tab {
   display: none;
 
-  &:target {
+  &:target,
+  &.active  {
     display: grid;
   }
 }

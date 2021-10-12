@@ -1,5 +1,5 @@
 (function () {
-  let popup = document.getElementById("popup-call");
+  let popup = document.querySelector("#popup-call");
   let targetItems = document.querySelectorAll(".button-callback");
   let fields = popup.querySelectorAll(".form__field");
 
