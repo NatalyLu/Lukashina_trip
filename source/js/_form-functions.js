@@ -1,5 +1,5 @@
 
-let html = document.getElementById("html");
+let html = document.querySelector("#html");
 
 var isStorageSupport = true;
 var storagePhone = "";
