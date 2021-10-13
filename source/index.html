@@ -386,6 +386,24 @@
         </section>
       </div>
 
+      <section class="callback">
+        <form class="callback__form form">
+          <h2 class="form__title">У Вас остались вопросы?</h2>
+          <p class="form__description">
+            Оставьте свой номер или e-mail и мы свяжемся с Вами
+          </p>
+          <div class="form__fields">
+            <div class="form__field form__field--asterisk">
+              <input type="tel" name="phone" placeholder="+7 Введите 10 цифр номера" maxlength="40" required="true">
+            </div>
+            <div class="form__field">
+              <input type="email" name="email" placeholder="E-mail" maxlength="100">
+            </div>
+          </div>
+          <button class="form__button button" name="submit" type="submit">Отправить</button>
+        </form>
+      </section>
+
       <section class="popup" id="popup-call">
         <form action="#" method="POST" class="popup__form form">
           <button class="form__close" type="button">
@@ -399,11 +417,11 @@
             </picture>
             <div class="form__content">
               <h2 class="form__title">Купить тур</h2>
-              <div class="form__field form__field--phone">
+              <div class="form__field form__field--asterisk">
                 <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" required="true">
               </div>
-              <div class="form__field form__field--email">
-                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100" required="true">
+              <div class="form__field">
+                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100">
               </div>
               <button class="form__button button" name="submit" type="submit">Отправить</button>
             </div>

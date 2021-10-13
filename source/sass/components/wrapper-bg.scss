@@ -5,9 +5,15 @@
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
+  margin-bottom: 145px;
 
   @media (max-width: $tablet-width) {
     min-height: auto;
     background: none;
+    margin-bottom: 110px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
   }
 }
