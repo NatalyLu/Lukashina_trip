@@ -12,7 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: $main-background-color;
-  box-shadow: 0 10px 20px -6px $main-color;
+  @include shadow;
   overflow-y: scroll;
   color: $popup-color;
 
@@ -168,10 +168,27 @@
   }
 }
 
+.form__field--asterisk {
+  position:relative;
+
+  input {
+    padding-left: 26px;
+  }
+
+  &:before {
+    content: "*";
+    position: absolute;
+    color: $active-color;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    top: 6px;
+    left: 15px;
+  }
+}
+
 .form__button {
   padding: 18px 40px;
   width: max-content;
   align-self: center;
-  font-size: .75rem;
-  line-height: 1rem;
+  min-width: 176px;
 }
