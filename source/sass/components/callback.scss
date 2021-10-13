@@ -1,0 +1,105 @@
+.callback {
+  @include center;
+  display: grid;
+  grid-template-columns: minmax(30px, 514px) 328px 328px;
+  min-height: 455px;
+  margin-bottom: 160px;
+  background-image: image-set(
+    url("/img/form-img.avif") 1x,
+    url("/img/form-img@2x.avif") 2x,
+    url("/img/form-img.webp") 1x,
+    url("/img/form-img@2x.webp") 2x,
+    url("/img/form-img.jpg") 1x,
+    url("/img/form-img@2x.jpg") 2x,
+  );
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 54px;
+    margin-bottom: 80px;
+    background-size: cover;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 60px;
+    padding: 50px 16px;
+    min-height: auto;
+    background-image: none;
+    background-color: $light-background;
+  }
+}
+
+.callback__form {
+  &.form {
+    grid-column: 2/4;
+    align-self: center;
+    max-width: 656px;
+    min-height: max-content;
+    height: auto;
+    max-height: max-content;
+    padding: 50px;
+    margin: 0;
+    color: $main-color;
+    border-radius: 5px;
+
+    @media (max-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
+
+    @media (max-width: $mobile-width) {
+      box-shadow: none;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  .form__title {
+    line-height: 2rem;
+    margin-bottom: 10px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form__description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 24px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form__fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 269px);
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 288px));
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+
+  .form__field {
+    margin: 0;
+  }
+
+  .form__button {
+    @media (max-width: $tablet-width) {
+      min-width: 250px;
+    }
+  }
+}

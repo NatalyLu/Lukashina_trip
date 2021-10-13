@@ -2,6 +2,8 @@
   @include center;
   max-width: calc(1170px + 100px);
   margin-bottom: 234px;
+  // Добавляем пространства сверху, чтобы при авто-перемещении к этому разделу, сам раздел не прилипал к верху
+  padding-top: 20px;
 
   @media (max-width: $tablet-width) {
     padding: 0;
@@ -18,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   max-width: 900px;
+  min-height: 40px;
   margin-bottom: 65px;
   border-bottom: 1px solid $strong-opacity-sub-dark;
   font-family: "Montserrat-Medium", "Arial", sans-serif;
@@ -38,7 +41,7 @@
 .tabs__item {
   color: $strong-opacity-sub-dark;
   text-decoration: none;
-  padding: 0 20px 15px 20px;
+  padding: 0 30px 15px 30px;
   transition: all .3s ease;
 
   &:last-child {
