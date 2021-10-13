@@ -4,14 +4,14 @@
   font-size: 1rem;
   line-height: 1.75rem;
   color: $sub-dark-color;
-  margin-bottom: 124px;
+  margin-bottom: 104px;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 95px;
+    margin-bottom: 75px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
