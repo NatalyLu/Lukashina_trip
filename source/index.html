@@ -390,7 +390,7 @@
         </section>
       </div>
 
-      <section class="callback">
+      <section class="callback" id="callback-form">
         <form class="callback__form form">
           <h2 class="form__title">У Вас остались вопросы?</h2>
           <p class="form__description">
@@ -398,7 +398,7 @@
           </p>
           <div class="form__fields">
             <div class="form__field form__field--asterisk">
-              <input type="tel" name="phone" placeholder="+7 Введите 10 цифр номера" maxlength="40" required="true">
+              <input type="tel" name="phone" placeholder="+7 Введите 10 цифр номера" maxlength="40" minlength="6" required="true">
             </div>
             <div class="form__field">
               <input type="email" name="email" placeholder="E-mail" maxlength="100">
@@ -422,7 +422,7 @@
             <div class="form__content">
               <h2 class="form__title">Купить тур</h2>
               <div class="form__field form__field--asterisk">
-                <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" required="true">
+                <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" minlength="6" required="true">
               </div>
               <div class="form__field">
                 <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100">

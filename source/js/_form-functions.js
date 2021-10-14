@@ -5,7 +5,6 @@ var isStorageSupport = true;
 var storagePhone = "";
 var storageEmail = "";
 
-
 try {
   storagePhone = localStorage.getItem("phone");
   storageEmail = localStorage.getItem("email");
@@ -96,10 +95,13 @@ let checkValidate = (form) => {
   let error = 0;
 
   [].slice.call(inputs).forEach(input => {
-    if (((input.getAttribute("type") === "tel") && (!checkPhone(input))) ||
-      ((input.getAttribute("type") === "email") && (!checkTextInput(email))) ) {
+    if (input.hasAttribute("required")) {
+      if ( ((input.getAttribute("type") === "tel") && (!checkPhone(input))) ||
+            ((input.getAttribute("type") === "email") && (!checkTextInput(email)))
+          ) {
         addError(input.parentElement);
         error++;
+      }
     }
   });
   return(error);
@@ -121,24 +123,43 @@ let moveToErrorPage = (popup) => {
   popup.querySelector(".form__second-page").classList.add("open");
 }
 
-let sendFormData = async (evt, popup, url) => {
+let sendFormData = async (evt, form, url) => {
   evt.preventDefault();
-  let errors = checkValidate(popup.querySelector(".form"));
+  let errors = checkValidate(form.querySelector(".form"));
   if (errors === 0) {
     if (isStorageSupport) {
       localStorage.setItem("phone", phone.value);
       localStorage.setItem("email", email.value);
     }
-    popup.classList.add("sending");
+    form.classList.add("sending");
     let response = await fetch(url, {
       method: "POST",
-      body: new FormData(popup.querySelector(".form"))
+      body: new FormData(form.querySelector(".form"))
     });
 
     if (response.ok) {
-      moveToNextPage(popup);
+      moveToNextPage(form);
     } else {
-      moveToErrorPage(popup);
+      moveToErrorPage(form);
     }
   }
+}
+
+let addSubmitListener = (form) => {
+  form.querySelector(".form").addEventListener("submit", (evt) => {
+    evt.preventDefault();
+    sendFormData(evt, form, window.util.FORM_ACTION);
+  });
+};
+
+let addSubmitAction = (targetForm) => {
+  [].slice.call(targetForm.querySelectorAll(".form__field")).forEach(field => {
+    field.addEventListener("input", () => {
+      if (field.classList.contains("error")) {
+        removeError(field);
+      }
+    });
+  });
+
+  addSubmitListener(targetForm);
 }
