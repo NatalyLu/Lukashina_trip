@@ -1,16 +1,16 @@
-.button-burger {
+.burger-input {
   position: absolute;
   opacity: 0;
 }
 
-.button-burger__lines {
+.burger-lines {
   width: 50px;
   height: 50px;
   cursor: pointer;
   background-color: $active-color;
 }
 
-.button-burger__line {
+.burger-line {
   &,
   &::before,
   &::after {
@@ -35,35 +35,35 @@
   }
 }
 
-.button-burger:checked {
-  ~ .button-burger__lines{
+.burger-input:checked {
+  ~ .burger-lines{
     background-color: transparent;
   }
-  ~ .button-burger__lines > .button-burger__line,
-  ~ .button-burger__lines > .button-burger__line::before,
-  ~ .button-burger__lines > .button-burger__line::after {
+  ~ .burger-lines > .burger-line,
+  ~ .burger-lines > .burger-line::before,
+  ~ .burger-lines > .burger-line::after {
     background-color: rgba($main-color, .8);
   }
 
-  ~ .button-burger__lines > .button-burger__line {
+  ~ .burger-lines > .burger-line {
     height: 0;
   }
 
-  ~ .button-burger__lines > .button-burger__line::before,
-  ~ .button-burger__lines > .button-burger__line::after {
+  ~ .burger-lines > .burger-line::before,
+  ~ .burger-lines > .burger-line::after {
     width: 30px;
   }
 
-  ~ .button-burger__lines > .button-burger__line::before {
+  ~ .burger-lines > .burger-line::before {
     transform: rotate(45deg);
   }
 
-  ~ .button-burger__lines > .button-burger__line::after {
+  ~ .burger-lines > .burger-line::after {
     transform: rotate(-45deg);
   }
 }
 
-.button-burger:active ~ .button-burger__lines,
-.button-burger:focus ~ .button-burger__lines {
+.burger-input:active ~ .burger-lines,
+.burger-input:focus ~ .burger-lines {
   opacity: 0.8;
 }
