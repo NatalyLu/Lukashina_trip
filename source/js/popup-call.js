@@ -1,33 +1,23 @@
 (function () {
-  let popup = document.querySelector("#popup-call");
+  let popupCall = document.querySelector("#popup-call");
+  let callbackForm = document.querySelector("#callback-form");
   let targetItems = document.querySelectorAll(".button-callback");
-  let fields = popup.querySelectorAll(".form__field");
 
   [].slice.call(targetItems).forEach(item => {
     item.addEventListener("click", (evt) => {
       evt.preventDefault();
-      openPopup(evt, popup);
+      openPopup(evt, popupCall);
     });
   });
 
   [].slice.call(targetItems).forEach(item => {
     item.addEventListener("keydown", (evt) => {
       if (evt.keyCode === window.util.ENTER_KEYCODE) {
-        openPopup(evt, popup);
+        openPopup(evt, popupCall);
       }
     });
   });
 
-  [].slice.call(fields).forEach(field => {
-    field.addEventListener("input", () => {
-      if (field.classList.contains("error")) {
-        removeError(field);
-      }
-    });
-  });
-
-  popup.querySelector(".form").addEventListener("submit", (evt) => {
-    evt.preventDefault();
-    sendFormData(evt, popup, "/action");
-  });
+  addSubmitAction(popupCall);
+  addSubmitAction(callbackForm);
 })();

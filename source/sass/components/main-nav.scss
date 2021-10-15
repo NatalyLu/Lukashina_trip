@@ -8,7 +8,7 @@
   @include center;
   padding-top: 36px;
   padding-bottom: 32px;
-  font-family: "Montserrat-Medium", "Arial", sans-serif;
+  font-family: "Montserrat-medium", "Arial", sans-serif;
   font-size: .875rem;
   line-height: 1.05rem;
   box-sizing: border-box;
@@ -49,7 +49,7 @@
   width: 100%;
 
   @media (max-width: $tablet-width) {
-    font-family: "Montserrat-SemiBold", "Arial", sans-serif;
+    font-family: "Montserrat-semibold", "Arial", sans-serif;
     font-size: 1.25rem;
     line-height: 1.63rem;
     position: absolute;
@@ -113,7 +113,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "Montserrat-Regular", "Arial", sans-serif;
+  font-family: "Montserrat-regular", "Arial", sans-serif;
   font-size: 1.125rem;
   transition: all .3s ease;
 

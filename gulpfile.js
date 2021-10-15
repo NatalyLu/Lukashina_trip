@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass")(require('sass'));
+const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
@@ -10,7 +10,7 @@ const terser = require("gulp-terser-js");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const avif = require('gulp-avif');
+const avif = require("gulp-avif");
 const svgstore = require("gulp-svgstore");
 const concat = require("gulp-concat");
 const order = require("gulp-order");
@@ -38,7 +38,7 @@ const styles = () => {
       csso()
     ]))
     .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write('.'))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
@@ -58,8 +58,8 @@ const scripts = () => {
         toplevel: true
       }
     }))
-    .on('error', function (error) {
-      this.emit('end')
+    .on("error", function (error) {
+      this.emit("end")
     })
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -89,9 +89,9 @@ exports.createWebp = createWebp;
 
 // Avif
 const createAvif = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(avif({quality: 80}))
-  .pipe(gulp.dest('build/img'));
+  .pipe(gulp.dest("build/img"));
 };
 exports.createAvif = createAvif;
 

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   border-radius: 6px;
   padding: 40px 30px 30px 30px;
-  font-family: "Montserrat-Regular", "Arial", sans-serif;
+  font-family: "Montserrat-regular", "Arial", sans-serif;
 
   @media (max-width: $tablet-width) {
     max-width: 288px;
@@ -36,7 +36,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-family: "Montserrat-SemiBold", "Arial", sans-serif;
+  font-family: "Montserrat-semibold", "Arial", sans-serif;
   font-size: 1.75rem;
   line-height: 2.375rem;
   margin: 0 0 36px 0;

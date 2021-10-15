@@ -2,8 +2,9 @@
 @import "components/fonts.scss";
 @import "components/mixins.scss";
 @import "components/common.scss";
+@import "components/cross.scss";
 
-@import "components/button-burger.scss";
+@import "components/burger.scss";
 @import "components/button.scss";
 @import "components/main-title.scss";
 @import "components/main-nav.scss";
@@ -19,3 +20,4 @@
 
 @import "components/form.scss";
 @import "components/popup.scss";
+@import "components/status.scss";
