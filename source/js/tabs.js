@@ -12,7 +12,7 @@
     // Поиск активного элемента
     // Разбиваем путь у целевого таба на 2 составляющие (до и после "#") 
     // Берем последний элемент массива - это и будет id нужного таба
-    areasTabs.querySelector("#" + evt.target.getAttribute("href").split('#').pop()).classList.add("active");
+    areasTabs.querySelector("#" + evt.target.getAttribute("href").split("#").pop()).classList.add("active");
   }
 
   // При первой загрузке страницы делаем первый элемент активным
