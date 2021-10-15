@@ -1,5 +1,6 @@
 
-let html = document.querySelector("#html");
+let html = document.querySelector("html");
+let mainTag = document.querySelector("main");
 
 var isStorageSupport = true;
 var storagePhone = "";
@@ -43,7 +44,8 @@ let closePopup = (evt, popup) => {
   evt.preventDefault();
   // Если была открыта 2 "страница" формы, то прячем их
   // Класс отвечающщий за скрытие первой страницы уберем при открытии попапа, чтобы анимация исчезновения не пострадала
-  popup.querySelector(".form__second-page").classList.remove("open");
+  // popup.querySelector(".form__second-page").classList.remove("open");
+
   popup.classList.remove("popup--active");
 
   popup.removeEventListener("click", evt => checkCloseArea(evt, popup));  
@@ -58,9 +60,9 @@ let closePopup = (evt, popup) => {
 let openPopup = (evt, popup) => {
   evt.preventDefault();
   // Если была открыта 2 "страница" формы, то нужно убрать с первой страницы класс её закрытия
-  if (popup.querySelector(".form__first-page").classList.contains("close")) {
-    popup.querySelector(".form__first-page").classList.remove("close");
-  }
+  // if (popup.querySelector(".form__first-page").classList.contains("close")) {
+  //   popup.querySelector(".form__first-page").classList.remove("close");
+  // }
   getStorage(popup);
   popup.querySelector("#phone").select();
   popup.classList.add("popup--active");
@@ -108,19 +110,21 @@ let checkValidate = (form) => {
 }
 
 let moveToNextPage = (popup) => {
-  popup.querySelector(".form").reset();
+  let successTemplate = document.querySelector("#success").content.querySelector(".status").cloneNode(true);
+  popup.querySelector(".form").reset()
   popup.classList.remove("sending");
-  popup.querySelector(".form__first-page").classList.add("close");
-  popup.querySelector(".form__second-page").classList.add("open");
+  mainTag.appendChild(successTemplate);
+  // popup.querySelector(".form__first-page").classList.add("close");
+  // popup.querySelector(".form__second-page").classList.add("open");
 }
 
 let moveToErrorPage = (popup) => {
   popup.querySelector(".form").reset();
   popup.classList.remove("sending");
-  popup.querySelector(".form__second-page").querySelector("#first-line").innerHTML = "Ошибка";
-  popup.querySelector(".form__second-page").querySelector("#second-line").innerHTML = "Сбой при отправке формы. Пожалуйста, попробуйте отправить данные позднее.";
-  popup.querySelector(".form__first-page").classList.add("close");
-  popup.querySelector(".form__second-page").classList.add("open");
+  // popup.querySelector(".form__second-page").querySelector("#first-line").innerHTML = "Ошибка";
+  // popup.querySelector(".form__second-page").querySelector("#second-line").innerHTML = "Сбой при отправке формы. Пожалуйста, попробуйте отправить данные позднее.";
+  // popup.querySelector(".form__first-page").classList.add("close");
+  // popup.querySelector(".form__second-page").classList.add("open");
 }
 
 let sendFormData = async (evt, form, url) => {
@@ -140,7 +144,8 @@ let sendFormData = async (evt, form, url) => {
     if (response.ok) {
       moveToNextPage(form);
     } else {
-      moveToErrorPage(form);
+      moveToNextPage(form);
+      // moveToErrorPage(form);
     }
   }
 }
