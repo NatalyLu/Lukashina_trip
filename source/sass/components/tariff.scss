@@ -9,7 +9,9 @@
 
   @media (max-width: $tablet-width) {
     max-width: 288px;
-    padding: 30px 20px;
+    padding: 30px 0 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -46,7 +48,7 @@
     text-align: center;
     font-size: 1.5rem;
     line-height: 2.125rem;
-    margin-bottom: 11px;
+    margin: 0 20px 11px 20px;
   }
 
   span {
@@ -64,8 +66,8 @@
 
   @media (max-width: $tablet-width) {
     text-align: center;
-    padding-bottom: 10px;
-    margin: 0 0 20px 0;
+    margin: 0 20px 20px 20px;
+    padding: 0 0 10px 0;
   }
 }
 
@@ -73,6 +75,10 @@
   @include drop__list-style;
   margin-bottom: 30px;
   line-height: 2rem;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 20px 30px 20px;
+  }
 }
 
 .tariff__component {
@@ -97,4 +103,8 @@
 
 .tariff__button {
   margin-top: auto;
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+  }
 }
