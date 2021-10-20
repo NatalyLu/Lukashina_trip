@@ -407,42 +407,38 @@
           <button class="form__button button" name="submit" type="submit">Отправить</button>
         </form>
       </section>
+
+      <!-- Попап обратной связи -->
+      <section class="popup" id="popup-call">
+        <form action="#" method="POST" class="popup__form form">
+          <button class="form__close cross" type="button">
+            <div class="cross__frame"><span class="visually-hidden">Закрыть</span></div>
+          </button>
+          <div class="form__wrapper">
+            <picture>
+              <source srcset="/img/areas/area-1.avif 1x, /img/areas/area-1@2x.avif 2x" type="image/avif">
+              <source srcset="/img/areas/area-1.webp 1x, /img/areas/area-1@2x.webp 2x" type="image/webp">
+              <img class="form__img" src="/img/areas/area-1.jpg" srcset="/img/areas/area-1@2x.jpg 2x" width="338" height="444" alt="Дом на горе">
+            </picture>
+            <div class="form__content">
+              <h2 class="form__title">Купить тур</h2>
+              <div class="form__field form__field--asterisk">
+                <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" minlength="6" required="true">
+              </div>
+              <div class="form__field">
+                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100">
+              </div>
+              <button class="form__button button" name="submit" type="submit">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="footer">
 
     </footer>
-    <!-- Попап обратной связи -->
-    <section class="popup" id="popup-call">
-      <form action="#" method="POST" class="popup__form form">
-        <button class="form__close cross" type="button">
-          <div class="cross__frame"><span class="visually-hidden">Закрыть</span></div>
-        </button>
-        <div class="form__wrapper">
-          <picture>
-            <source srcset="/img/areas/area-1.avif 1x, /img/areas/area-1@2x.avif 2x" type="image/avif">
-            <source srcset="/img/areas/area-1.webp 1x, /img/areas/area-1@2x.webp 2x" type="image/webp">
-            <img class="form__img" src="/img/areas/area-1.jpg" srcset="/img/areas/area-1@2x.jpg 2x" width="338" height="444" alt="Дом на горе">
-          </picture>
-          <div class="form__content">
-            <h2 class="form__title">Купить тур</h2>
-            <div class="form__field form__field--asterisk">
-              <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" minlength="6" required="true">
-            </div>
-            <div class="form__field">
-              <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100">
-            </div>
-            <button class="form__button button" name="submit" type="submit">Отправить</button>
-          </div>
-        </div>
-        <!-- <div class="form__second-page">
-          <p class="form__description description">
-            <span id="first-line">Форма успешно отправлена,</span>
-            <span id="second-line">спасибо! :)</span>
-          </p>
-        </div> -->
-      </form>
-    </section>
+
     <!-- Сообщение с ошибкой загрузки изображения -->
     <template id="error">
       <section class="status">
