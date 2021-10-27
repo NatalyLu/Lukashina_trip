@@ -6,7 +6,8 @@
 
 @import "components/burger.scss";
 @import "components/button.scss";
-@import "components/main-title.scss";
+@import "components/titles/main-title.scss";
+@import "components/titles/small-title.scss";
 @import "components/main-nav.scss";
 @import "components/introduce.scss";
 @import "components/areas.scss";
@@ -21,3 +22,5 @@
 @import "components/form.scss";
 @import "components/popup.scss";
 @import "components/status.scss";
+
+@import "components/footer.scss";

@@ -5,11 +5,20 @@ $max-width: 1210px; // 1170 + 20*2 => 20- для падингов;
 
 $main-color: #141517;
 $sub-dark-color: #2C2E3F;
+
 $popup-color: #48494D;
 $opacity-sub-dark: rgba($sub-dark-color, .7);
 $strong-opacity-sub-dark:  rgba($sub-dark-color, .3);
+
 $active-color: #FE7865;
 $sub-active-color: #F17D4B;
+
 $main-background-color: #fff;
 $text-light: $main-background-color;
 $light-background: #FBF8F8;
+
+$icons-light-color: #D7D9DF;
+
+$border-color: $icons-light-color;
+
+$footer-color: rgba($main-color, .5);
