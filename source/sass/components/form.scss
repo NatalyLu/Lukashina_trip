@@ -16,6 +16,12 @@
   overflow-y: scroll;
   color: $popup-color;
 
+  @media (max-width: $tablet-width) {
+    max-width: 350px;
+    align-items: stretch;
+    min-height: 400px;
+  }
+
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -37,6 +43,11 @@
   grid-template-columns: 1fr 1fr;
   box-sizing: border-box;
 
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
   &.close{
     display: none;
   }
@@ -47,6 +58,10 @@
   grid-row: 1/-1;
   grid-column: 1/2;
   width: 100%;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .form__content {
@@ -54,6 +69,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 60px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .form__title {
@@ -62,6 +81,10 @@
   line-height: 2.6rem;
   margin: 0 0 50px 0;
   text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 20px 0;
+  }
 }
 
 .form__description {
@@ -144,4 +167,9 @@
   width: max-content;
   align-self: center;
   min-width: 176px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    min-width: 100%;
+  }
 }

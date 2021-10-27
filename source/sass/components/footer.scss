@@ -1,0 +1,88 @@
+.footer {
+  font-family: "Montserrat-regular", "Arial", sans-serif;
+  font-size: .875rem;
+  line-height: 1.06rem;
+  color: $footer-color;
+  @include center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 375px));
+  justify-content: space-between;
+  padding-bottom: 74px;
+  gap: 30px 10px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(2, minmax(min-content, 333px));
+    padding-bottom: 54px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+
+  .small-title {
+    margin-bottom: 20px;
+  }
+
+  div:first-child {
+    padding-left: 0;
+    border: none;
+  }
+}
+
+.footer__trips,
+.footer__contacts,
+.footer__additional {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 55px;
+  border-left: 1px solid $border-color;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 50px;
+  }
+}
+
+.footer__additional {
+  @media (max-width: $tablet-width) {
+    grid-column: 1/-1;
+    padding: 30px 0 0 0;
+    border-left: none;
+    border-top: 1px solid $border-color;
+    text-align: center;
+  }
+}
+
+.footer__trips-list {
+  @include drop__list-style;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 20px;
+}
+
+.footer__contacts a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__contact {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 0 11px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  a {
+    color: $active-color;
+    text-decoration: underline;
+  }
+
+  svg {
+    fill: $icons-light-color;
+  }
+}
+
+.footer__text {
+  margin: 0;
+  line-height: 1.4rem;
+}
