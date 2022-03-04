@@ -43,15 +43,15 @@ let checkCloseArea = (evt, popup) => {
 let closePopup = (evt, popup) => {
   evt.preventDefault();
   // Если была открыта 2 страница
-  if (document.querySelector('.status')) {
-    let nextPage = document.querySelector('.status');
+  if (document.querySelector(".status")) {
+    let nextPage = document.querySelector(".status");
     let closeButton = nextPage.querySelector(".status__close");
     // Удаляем обработчики
     nextPage.removeEventListener("click", evt => checkCloseArea(evt, popup));
     closeButton.removeEventListener("click", (evt) => {closePopup(evt, popup, nextPage);});  
     closeButton.removeEventListener("keydown", (evt) => {closePopup(evt, popup, nextPage)});
     
-    popup = document.querySelector('.popup--active');
+    popup = document.querySelector(".popup--active");
     // Удаляем всю секцию из main
     nextPage.remove();
   }
