@@ -6,13 +6,15 @@
   padding: 30px;
   background-color: $main-background-color;
   box-sizing: border-box;
+  @include shadow;
+
+  @media (max-width: $tablet-width) {
+    box-shadow: none;
+  }
 
   @media (max-width: $mobile-width) {
     width: 85%;
     min-width: 85%;
-  }
-
-  @media (max-width: $mobile-width) {
     align-items: center;
   }
 }
